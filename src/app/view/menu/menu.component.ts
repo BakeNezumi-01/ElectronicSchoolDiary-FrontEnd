@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuHandlerService} from '../../service/menu-handler.service';
+import {Data} from '../../Data/Data';
 
 @Component({
   selector: 'app-menu',
@@ -12,18 +13,14 @@ export class MenuComponent implements OnInit {
     'Main', 'Schedule', 'Rates', 'Messages', 'LK',
   ];
 
-  private currentCategory: string;
-
   constructor(private menuHandler: MenuHandlerService) {
   }
 
   ngOnInit(): void {
-    this.currentCategory = this.categories[0];
   }
 
   // tslint:disable-next-line:typedef
   showContent(category: string) {
-    this.currentCategory = category;
     this.menuHandler.fillContent(category);
   }
 }

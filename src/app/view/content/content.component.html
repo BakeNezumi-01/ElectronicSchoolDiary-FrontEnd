@@ -18,56 +18,166 @@
   </div>
   <!-- /.content-header -->
 
-  <!-- Main content -->
-  <section class="content">
+  <div [ngSwitch]="currentCategory">
+    <div    *ngSwitchCase="'Main'" >
+      <section class="content">
 
-    <div class="row">
-      <div class="col-12">
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">8 November, Sunday</h3>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">8 November, Sunday</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <th>Time</th>
+                    <th>Teacher</th>
+                    <th>Discipline</th>
+                    <th>HomeWork</th>
+                    <th>Comment</th>
+                    <th>Rate</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>9:00</td>
+                    <td> teacher</td>
+                    <td>math</td>
+                    <td>there is no one</td>
+                    <td>-</td>
+                    <td>5</td>
+                  </tr>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
           </div>
-          <!-- /.card-header -->
-          <div class="card-body">
-            <table id="example2" class="table table-bordered table-hover">
-              <thead>
-              <tr>
-                <th>Time</th>
-                <th>Teacher</th>
-                <th>Discipline</th>
-                <th>HomeWork</th>
-                <th>Comment</th>
-                <th>Rate</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>9:00</td>
-                <td> teacher</td>
-                <td>math</td>
-                <td>there is no one</td>
-                <td>-</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <td>10:45</td>
-                <td> teacher</td>
-                <td>history</td>
-                <td>there is no one</td>
-                <td>-</td>
-                <td>5</td>
-              </tr>
-            </table>
-          </div>
-          <!-- /.card-body -->
+          <!-- /.col -->
         </div>
-        <!-- /.card -->
 
-      </div>
-      <!-- /.col -->
+      </section>
     </div>
+    <div      *ngSwitchCase="'Schedule'">
+      <section class="content">
 
-  </section>
-  <!-- /.content -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">8 November, Sunday</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                {{currentCategory}}
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+          </div>
+          <!-- /.col -->
+        </div>
+
+      </section>
+    </div>
+    <div      *ngSwitchCase="'Rates'">
+      <section class="content">
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">8 November, Sunday</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                {{currentCategory}}
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+          </div>
+          <!-- /.col -->
+        </div>
+
+      </section>
+    </div>
+    <div      *ngSwitchCase="'Messages'">
+      <section class="content">
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">8 November, Sunday</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                {{currentCategory}}
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+          </div>
+          <!-- /.col -->
+        </div>
+
+      </section>
+    </div>
+    <div *ngSwitchCase="'LK'" >
+      <section class="content">
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">8 November, Sunday</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                {{currentCategory}}
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+          </div>
+          <!-- /.col -->
+        </div>
+
+      </section>
+    </div>
+    <div  *ngSwitchDefault         >
+      <section class="content">
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">8 November, Sunday</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                {{currentCategory}}
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+          </div>
+          <!-- /.col -->
+        </div>
+
+      </section>
+    </div>
+  </div>
+
 </div>
 <!-- /.content-wrapper -->
